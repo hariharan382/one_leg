@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<robot name="Hip" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="adduction_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="adduction_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="adduction_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="thigh_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="thigh_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="thigh_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="knee_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="knee_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="knee_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="servo_mimic_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="servo_mimic">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="servo_mimic_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="long_link_mimic_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="long_link_mimic">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="long_link_mimic_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="small_link_mimic_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="small_link_mimic">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="small_link_mimic_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find Hip_description)/launch/controller.yaml" command="load"/>
+<node args="adduction_joint_position_controller thigh_joint_position_controller knee_joint_position_controller servo_mimic_position_controller long_link_mimic_position_controller small_link_mimic_position_controller joint_state_controller " name="controller_spawner" ns="Hip" output="screen" pkg="controller_manager" respawn="false" type="spawner"/>
+<node name="robot_state_publisher" output="screen" pkg="robot_state_publisher" respawn="false" type="robot_state_publisher">
+  <remap from="/joint_states" to="/Hip/joint_states"/>
+</node>
+
+</launch>

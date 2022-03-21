@@ -1,0 +1,250 @@
+<?xml version="1.0" ?>
+<robot name="Hip" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Hip_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Hip_description)/urdf/Hip.trans" />
+<xacro:include filename="$(find Hip_description)/urdf/Hip.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.11317235758929955 -0.01518069279018956 -0.23418288226118394"/>
+    <mass value="0.2551656131608718"/>
+    <inertia ixx="4.4e-05" ixy="-0.0" ixz="3e-06" iyy="4.3e-05" iyz="-0.0" izz="7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="InnerHip_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03796381544948282 -0.00209817011719729 -0.018817349270950384"/>
+    <mass value="0.0331527367682486"/>
+    <inertia ixx="1.7e-05" ixy="-1e-06" ixz="-2e-06" iyy="2.9e-05" iyz="-0.0" izz="1.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.088543 0.02646 0.231872"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/InnerHip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.088543 0.02646 0.231872"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/InnerHip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_servo_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.007625306439457719 -0.0005400385708509252 0.022417687138365283"/>
+    <mass value="0.25516561316087183"/>
+    <inertia ixx="4.3e-05" ixy="-2e-06" ixz="0.0" iyy="7e-05" iyz="0.0" izz="4.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.059771 0.028026 0.24807"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/thigh_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.059771 0.028026 0.24807"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/thigh_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="knee_servo__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.011939393258889909 -0.0005860814659210192 -0.020447708023256073"/>
+    <mass value="0.25516561316087183"/>
+    <inertia ixx="4.3e-05" ixy="-2e-06" ixz="-0.0" iyy="7e-05" iyz="0.0" izz="4.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.056967 0.028057 0.275929"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/knee_servo__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.056967 0.028057 0.275929"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/knee_servo__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh_link_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.04669295926828271 0.014459807125831057 -0.012900912125532793"/>
+    <mass value="0.07793276693390079"/>
+    <inertia ixx="1.4e-05" ixy="-3.3e-05" ixz="1.6e-05" iyy="0.000112" iyz="5e-06" izz="0.00012"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.05939 0.028031 0.251851"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/thigh_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.05939 0.028031 0.251851"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/thigh_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="knee_link_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.012044421580622244 -0.05003574503008149 -0.004078479289484405"/>
+    <mass value="0.09455286210059435"/>
+    <inertia ixx="0.000185" ixy="4.5e-05" ixz="1e-06" iyy="1.3e-05" iyz="-5e-06" izz="0.000198"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.17573 -0.007724 0.276261"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/knee_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.17573 -0.007724 0.276261"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/knee_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="kne__small_link_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0027015905622561273 0.011830366946616551 0.002536782975098628"/>
+    <mass value="0.004751772113679681"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="0.0" iyz="-0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.057348 0.028053 0.272148"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/kne__small_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.057348 0.028053 0.272148"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/kne__small_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ha_link_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.05852890523536845 -0.01788198679755837 0.008674404525435941"/>
+    <mass value="0.06417414947730624"/>
+    <inertia ixx="1.1e-05" ixy="-2.9e-05" ixz="1e-05" iyy="9.6e-05" iyz="3e-06" izz="0.000104"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.167285 -0.04168 0.275448"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/ha_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.167285 -0.04168 0.275448"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/ha_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ha_link_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.05907909476463154 0.017888013202441634 -0.0032015954745641118"/>
+    <mass value="0.06417414947730624"/>
+    <inertia ixx="1.1e-05" ixy="-2.9e-05" ixz="1e-05" iyy="9.6e-05" iyz="3e-06" izz="0.000104"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.049677 -0.00591 0.263572"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/ha_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.049677 -0.00591 0.263572"/>
+    <geometry>
+      <mesh filename="package://Hip_description/meshes/ha_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="adduction_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="0.088543 -0.02646 -0.231872"/>
+  <parent link="base_link"/>
+  <child link="InnerHip_1"/>
+  <axis xyz="0.99334 0.057163 -0.100037"/>
+</joint>
+
+<joint name="thigh_servo_hip" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.028772 -0.001566 -0.016198"/>
+  <parent link="InnerHip_1"/>
+  <child link="thigh_servo_1"/>
+</joint>
+
+<joint name="knee_servo_hip" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.031576 -0.001597 -0.044057"/>
+  <parent link="InnerHip_1"/>
+  <child link="knee_servo__1"/>
+</joint>
+
+<joint name="thigh_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.000381 -5e-06 -0.003781"/>
+  <parent link="thigh_servo_1"/>
+  <child link="thigh_link_1"/>
+  <axis xyz="0.100139 0.001084 0.994973"/>
+</joint>
+
+<joint name="knee_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="0.11634 0.035755 -0.02441"/>
+  <parent link="thigh_link_1"/>
+  <child link="knee_link_1"/>
+  <axis xyz="-0.100139 -0.001084 -0.994973"/>
+</joint>
+
+<joint name="servo_mimic" type="continuous">
+  <origin rpy="0 0 0" xyz="0.000381 4e-06 0.003781"/>
+  <parent link="knee_servo__1"/>
+  <child link="kne__small_link_1"/>
+  <axis xyz="-0.100139 -0.001084 -0.994973"/>
+</joint>
+
+<joint name="long_link_mimic" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.126053 -0.001814 0.012689"/>
+  <parent link="knee_link_1"/>
+  <child link="ha_link_1"/>
+  <axis xyz="-0.100139 -0.001084 -0.994973"/>
+</joint>
+
+<joint name="small_link_mimic" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.007671 0.033963 0.008576"/>
+  <parent link="kne__small_link_1"/>
+  <child link="ha_link_1"/>
+  <axis xyz="0.100139 0.001084 0.994973"/>
+</joint>
+
+</robot>
